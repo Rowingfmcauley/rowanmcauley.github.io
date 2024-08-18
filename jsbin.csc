@@ -1,19 +1,3 @@
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2024 by Rowingfmcauley (http://jsbin.com/newivov/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rowan McAuley</title>
-    <link rel="stylesheet" href="styles.css">
-<style id="jsbin-css">
 /* General Styles */
 body {
     font-family: 'Cursive', Lucida Handwriting;
@@ -127,48 +111,73 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Contact Section */
-.contact-section {
-    padding: 60px 0;
+/* Contact section styles */
+#contact {
+    padding: 40px;
+    background-color: #f8f8f8;
     text-align: center;
 }
 
-.contact-form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 600px;
+#contact h2 {
+    margin-bottom: 20px;
+    color: #001f3f; /* Navy blue */
+}
+
+#contact p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#contact a {
+    color: #001f3f; /* Navy blue */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #001f3f; /* Navy blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
+.footer-content p {
+    margin: 0 0 10px;
 }
 
-.contact-form .btn {
-    background-color: #0a3a66;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.social-links {
+    margin-top: 10px;
 }
 
-/* Footer Styles */
-.main-footer {
-    background-color: #0a3a66;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.main-footer .social-media a {
-    color: #ffffff;
+.social-links a {
     margin: 0 10px;
-    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
+
+.social-links img {
+    width: 50px;
+    height: 30px;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Scale effect on hover */
+.social-links a:hover img {
+    transform: scale(1.2); /* Scale up the logo by 20% */
+}
+
+
 
 /* Popup Styles */
 .popup {
@@ -222,12 +231,67 @@ h1, h2, h3, h4, h5, h6 {
 
 .reveal-modal {
     position: relative;
-    margin: 0 auto;
-    top: 25%;
+  
+  
+}  
+/* Base pop-up styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it's on top of other elements */
+    text-align: center;
+}
+
+/* Overlay behind the pop-up */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Behind the pop-up but above the rest of the content */
+}
+
+/* Show pop-up when active */
+.popup.active, .overlay.active {
+    display: block;
+}
+
+/* Close button styling */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #001f3f; /* Navy blue */
+}
+
+.popup-content {
+    margin-top: 20px;
 }
   
   
   
+  
+  
+  
+  
+  
+    margin: 0 auto;
+    top: 25%;
+}
   
   
   
