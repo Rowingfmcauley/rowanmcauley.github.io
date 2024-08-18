@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowan McAuley</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -79,29 +84,34 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, you can reach me at:</p>
+        <p>Email: <a href="mailto:youremail@example.com">rowanmcauley1@gmail.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 (984) 259-6695</a></p>
+        <p>Questions? Comments? Reccomendations? All are welcome</p>
     </section>
 
+
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2024 Rowan McAuley. All Rights Reserved.</p>
-            <div class="social-media">
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-                <a href="#">GitHub</a>
+    <footer>
+        <div class="footer-content">
+            <p>Keep up with our campaign on social media:</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://media.designrush.com/inspiration_images/280757/conversions/facebook_logo_3abea1f9806e-desktop.jpg" alt="Facebook" />
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="https://cdn.vectorstock.com/i/500p/47/55/x-logo-twitter-new-icon-vector-48174755.avif" alt="Twitter/ X" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/E802/production/_89649395_instagram_logo_976.jpg.webp" alt="Instagram" />
+                </a>
             </div>
+            <p>© 2024 Rowan McAuley. All Rights Reserved.</p>
         </div>
     </footer>
+
 
     <!-- Project 1 Popup -->
     <div id="project1-popup" class="popup">
@@ -152,26 +162,5 @@
             document.getElementById(popupId).style.display = 'none';
         }
     </script>
-<script id="jsbin-javascript">
-// saveMessage.js
-
-document.getElementById('message-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
-
-    // Capture the message from the textarea
-    const message = document.getElementById('message-input').value;
-
-    // Save the message as a string
-    const savedMessage = message;
-
-    // Display the saved message
-    document.getElementById('saved-message').textContent = "Saved Message: " + savedMessage;
-
-    // Optionally, clear the input field
-    document.getElementById('message-input').value = '';
-});
-
-
-</script>
 </body>
 </html>
