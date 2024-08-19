@@ -1,243 +1,240 @@
+/* General Styles */
+body {
+font-family: 'Cursive', Lucida Handwriting;
+    color: #333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0a3a66; /* Navy Blue */
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #0a3a66; /* Navy Blue */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-header nav ul li {
+    display: inline;
+    margin: 0 14px;
+}
+
+.main-header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Banner Styles */
+.banner {
+    background-color: #1e4d8f; /* Slightly Lighter Navy Blue */
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.banner .btn {
+    background-color: #ffffff;
+    color: #0a3a66;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 0;
+    background-color: #f0f4f8;
+    text-align: center;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+    padding: 60px 0;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 60px 0;
+    background-color: #f0f4f8;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-post {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    color: #001f3f; /* Navy blue */
+}
+
+#contact p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+#contact a {
+    color: #001f3f; /* Navy blue */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #001f3f; /* Navy blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0 0 10px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.social-links img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* Scale effect on hover */
+.social-links a:hover img {
+    transform: scale(1.2); /* Scale up the logo by 20% */
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+/* Overlay behind the pop-up */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Show pop-up when active */
+.popup.active, .overlay.active {
+    display: block;
+}
+
+/* Close button styling */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #001f3f; /* Navy blue */
+}
+
+.popup-content {
+    margin-top: 20px;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rowan McAuley</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Cursive', Lucida Handwriting;
-            color: #333;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: #0a3a66; /* Navy Blue */
-        }
-
-        /* Header Styles */
-        .main-header {
-            background-color: #0a3a66; /* Navy Blue */
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        .main-header nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .main-header nav ul li {
-            display: inline;
-            margin: 0 14px;
-        }
-
-        .main-header nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Banner Styles */
-        .banner {
-            background-color: #1e4d8f; /* Slightly Lighter Navy Blue */
-            color: #ffffff;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .banner .btn {
-            background-color: #ffffff;
-            color: #0a3a66;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 60px 0;
-            background-color: #f0f4f8;
-            text-align: center;
-        }
-
-        /* Portfolio Section */
-        .portfolio-section {
-            padding: 60px 0;
-        }
-
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .portfolio-item {
-            background-color: #ffffff;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .portfolio-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        /* Blog Section */
-        .blog-section {
-            padding: 60px 0;
-            background-color: #f0f4f8;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .blog-post {
-            background-color: #ffffff;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 40px;
-            background-color: #f8f8f8;
-            text-align: center;
-        }
-
-        #contact h2 {
-            margin-bottom: 20px;
-            color: #001f3f; /* Navy blue */
-        }
-
-        #contact p {
-            margin: 10px 0;
-            font-size: 18px;
-            color: #333;
-        }
-
-        #contact a {
-            color: #001f3f; /* Navy blue */
-            text-decoration: none;
-        }
-
-        #contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #001f3f; /* Navy blue */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-content p {
-            margin: 0 0 10px;
-        }
-
-        .social-links {
-            margin-top: 10px;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            display: inline-block;
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
-        }
-
-        .social-links img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
-        }
-
-        /* Scale effect on hover */
-        .social-links a:hover img {
-            transform: scale(1.2); /* Scale up the logo by 20% */
-        }
-
-        /* Popup Styles */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            max-width: 600px;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ccc;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            text-align: center;
-        }
-
-        /* Overlay behind the pop-up */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-
-        /* Show pop-up when active */
-        .popup.active, .overlay.active {
-            display: block;
-        }
-
-        /* Close button styling */
-        .popup-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            font-size: 20px;
-            color: #001f3f; /* Navy blue */
-        }
-
-        .popup-content {
-            margin-top: 20px;
-        }
-
-        .popup-content img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
 <body>
     <!-- Header -->
     <header class="main-header">
@@ -301,6 +298,98 @@
             <div class="blog-grid">
                 <!-- Blog Post 1 -->
                 <div class="blog-post" onclick="openPopup('blog1-popup')">
-                    <h3>Campaign Post
+                    <h3>Campaign Post 1</h3>
+                    <p>Summary of the blog post...</p>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="blog-post" onclick="openPopup('blog2-popup')">
+                    <h3>Campaign Post 2</h3>
+                    <p>Summary of the blog post...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Rowan McAuley</h2>
+        <p>Email: <a href="mailto:rowan@example.com">rowan@example.com</a></p>
+        <p>Phone: <a href="tel:+15555555555">(555) 555-5555</a></p>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Rowan McAuley</p>
+            <p>Durham, NC</p>
+            <div class="social-links">
+                <a href="https://twitter.com/yourprofile" target="_blank">
+                    <img src="twitter-logo.png" alt="Twitter Logo">
+                </a>
+                <a href="https://instagram.com/yourprofile" target="_blank">
+                    <img src="instagram-logo.png" alt="Instagram Logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Overlays -->
+    <div id="project1-popup" class="popup">
+        <span class="popup-close" onclick="closePopup('project1-popup')">&times;</span>
+        <div class="popup-content">
+            <h3>Project Title 1</h3>
+            <img src="project1.jpg" alt="Project 1">
+            <p>Detailed description of Project 1.</p>
+        </div>
+    </div>
+
+    <div id="project2-popup" class="popup">
+        <span class="popup-close" onclick="closePopup('project2-popup')">&times;</span>
+        <div class="popup-content">
+            <h3>Project Title 2</h3>
+            <img src="project2.jpg" alt="Project 2">
+            <p>Detailed description of Project 2.</p>
+        </div>
+    </div>
+
+    <div id="blog1-popup" class="popup">
+        <span class="popup-close" onclick="closePopup('blog1-popup')">&times;</span>
+        <div class="popup-content">
+            <h3>Campaign Post 1</h3>
+            <p>Detailed description of Blog Post 1.</p>
+        </div>
+    </div>
+
+    <div id="blog2-popup" class="popup">
+        <span class="popup-close" onclick="closePopup('blog2-popup')">&times;</span>
+        <div class="popup-content">
+            <h3>Campaign Post 2</h3>
+            <p>Detailed description of Blog Post 2.</p>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="popup-overlay" onclick="closeAllPopups()"></div>
+
+    <!-- Script for Pop-ups -->
+    <script>
+        function openPopup(popupId) {
+            document.getElementById(popupId).classList.add('active');
+            document.getElementById('popup-overlay').classList.add('active');
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).classList.remove('active');
+            document.getElementById('popup-overlay').classList.remove('active');
+        }
+
+        function closeAllPopups() {
+            var popups = document.querySelectorAll('.popup');
+            popups.forEach(function(popup) {
+                popup.classList.remove('active');
+            });
+            document.getElementById('popup-overlay').classList.remove('active');
+        }
+    </script>
+</body>
+</html>
