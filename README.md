@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-font-family: 'Cursive', Lucida Handwriting;
+    font-family: 'Cursive', Lucida Handwriting;
     color: #333;
     background-color: #ffffff;
     margin: 0;
@@ -13,7 +13,7 @@ font-family: 'Cursive', Lucida Handwriting;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #0a3a66; /* Navy Blue */
+    color: #; /* Navy Blue */
 }
 
 /* Header Styles */
@@ -111,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Contact Section */
+/* Contact section styles */
 #contact {
     padding: 40px;
     background-color: #f8f8f8;
@@ -136,6 +137,7 @@ h1, h2, h3, h4, h5, h6 {
 #contact a:hover {
     text-decoration: underline;
 }
+
 
 /* Footer styles */
 footer {
@@ -166,7 +168,7 @@ footer {
 
 .social-links img {
     width: 50px;
-    height: 50px;
+    height: 30px;
     transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
 
@@ -175,9 +177,66 @@ footer {
     transform: scale(1.2); /* Scale up the logo by 20% */
 }
 
+
+
 /* Popup Styles */
 .popup {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #333;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup h2 {
+    color: #0a3a66; /* Navy Blue */
+    margin-bottom: 20px;
+    
+}
+
+.popup p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.reveal-modal {
+    position: relative;
+  
+  
+}  
+/* Base pop-up styling */
+.popup {
+    display: none; /* Hidden by default */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -188,20 +247,20 @@ footer {
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 1000; /* Ensures it's on top of other elements */
     text-align: center;
 }
 
 /* Overlay behind the pop-up */
 .overlay {
-    display: none;
+    display: none; /* Hidden by default */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 999; /* Behind the pop-up but above the rest of the content */
 }
 
 /* Show pop-up when active */
@@ -222,25 +281,20 @@ footer {
 .popup-content {
     margin-top: 20px;
 }
-
-.popup-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rowan McAuley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <!-- Header -->
     <header class="main-header">
         <div class="container">
             <h1>Rowan McAuley</h1>
-            <p>Student. Athlete. Leader.</p>
+            <p>Student. Athelte. Leader</p>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -266,8 +320,7 @@ footer {
         <div class="container">
             <h2>About Me</h2>
             <p>My name is Rowan McAuley, a 14-year-old freshman at Riverside High School in Durham. I spent my earlier years at Eno River Academy, a K-12 charter school in Hillsborough, where I attended from 3rd to 8th grade.</p>
-            <p>I’m passionate about sports and enjoy challenging myself both physically and mentally. This fall, I’m running Cross Country. Looking ahead, I plan to run winter track and play tennis next spring.</p>
-        </div>
+            <p>I’m passionate about sports and enjoy challenging myself both physically and mentally. This fall, I’m running Cross Country. Looking ahead, I plan to run winter track and play tennis next spring.<p>
     </section>
 
     <!-- Portfolio -->
@@ -298,97 +351,97 @@ footer {
             <div class="blog-grid">
                 <!-- Blog Post 1 -->
                 <div class="blog-post" onclick="openPopup('blog1-popup')">
-                    <h3>Campaign Post 1</h3>
-                    <p>Summary of the blog post...</p>
+                    <h3>Campaign Post Title 1</h3>
+                    <p>Short excerpt from the campaign post...</p>
+                    <a href="#">Read More</a>
                 </div>
                 <!-- Blog Post 2 -->
                 <div class="blog-post" onclick="openPopup('blog2-popup')">
-                    <h3>Campaign Post 2</h3>
-                    <p>Summary of the blog post...</p>
+                    <h3>Campaign Post Title 2</h3>
+                    <p>Short excerpt from the campaign post...</p>
+                    <a href="#">Read More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
-        <h2>Contact Rowan McAuley</h2>
-        <p>Email: <a href="mailto:rowan@example.com">rowan@example.com</a></p>
-        <p>Phone: <a href="tel:+15555555555">(555) 555-5555</a></p>
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, you can reach me at:</p>
+        <p>Email: <a href="mailto:rowanmcauley1@gmail.com">rowanmcauley1@gmail.com</a></p>
+        <p>Phone: <a href="tel:+19842596695">+1 (984) 259-6695</a></p>
+        <p>Questions? Comments? Reccomendations? All are welcome</p>
     </section>
+
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Rowan McAuley</p>
-            <p>Durham, NC</p>
+            <p>Keep up with our campaign on social media:</p>
             <div class="social-links">
-                <a href="https://twitter.com/yourprofile" target="_blank">
-                    <img src="twitter-logo.png" alt="Twitter Logo">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://media.designrush.com/inspiration_images/280757/conversions/facebook_logo_3abea1f9806e-desktop.jpg" alt="Facebook" />
                 </a>
-                <a href="https://instagram.com/yourprofile" target="_blank">
-                    <img src="instagram-logo.png" alt="Instagram Logo">
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="https://cdn.vectorstock.com/i/500p/47/55/x-logo-twitter-new-icon-vector-48174755.avif" alt="Twitter/ X" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/E802/production/_89649395_instagram_logo_976.jpg.webp" alt="Instagram" />
                 </a>
             </div>
+            <p>© 2024 Rowan McAuley. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Popup Overlays -->
+
+    <!-- Project 1 Popup -->
     <div id="project1-popup" class="popup">
-        <span class="popup-close" onclick="closePopup('project1-popup')">&times;</span>
         <div class="popup-content">
-            <h3>Project Title 1</h3>
+            <span class="close" onclick="closePopup('project1-popup')">&times;</span>
+            <h2>Project Title 1</h2>
             <img src="project1.jpg" alt="Project 1">
-            <p>Detailed description of Project 1.</p>
+            <p>Detailed description of Project 1. Explain the project, its goals, the process, and the outcome.</p>
         </div>
     </div>
 
+    <!-- Project 2 Popup -->
     <div id="project2-popup" class="popup">
-        <span class="popup-close" onclick="closePopup('project2-popup')">&times;</span>
         <div class="popup-content">
-            <h3>Project Title 2</h3>
+            <span class="close" onclick="closePopup('project2-popup')">&times;</span>
+            <h2>Project Title 2</h2>
             <img src="project2.jpg" alt="Project 2">
-            <p>Detailed description of Project 2.</p>
+            <p>Detailed description of Project 2. Explain the project, its goals, the process, and the outcome.</p>
         </div>
     </div>
 
+    <!-- Blog 1 Popup -->
     <div id="blog1-popup" class="popup">
-        <span class="popup-close" onclick="closePopup('blog1-popup')">&times;</span>
         <div class="popup-content">
-            <h3>Campaign Post 1</h3>
-            <p>Detailed description of Blog Post 1.</p>
+            <span class="close" onclick="closePopup('blog1-popup')">&times;</span>
+            <h2>Blog Post Title 1</h2>
+            <img src="blog1.jpg" alt="Blog Post 1">
+            <p>Full content of Blog Post 1. Discuss the topic in detail, share insights, and include relevant images.</p>
         </div>
     </div>
 
+    <!-- Blog 2 Popup -->
     <div id="blog2-popup" class="popup">
-        <span class="popup-close" onclick="closePopup('blog2-popup')">&times;</span>
         <div class="popup-content">
-            <h3>Campaign Post 2</h3>
-            <p>Detailed description of Blog Post 2.</p>
+            <span class="close" onclick="closePopup('blog2-popup')">&times;</span>
+            <h2>Blog Post Title 2</h2>
+            <img src="blog2.jpg" alt="Blog Post 2">
+            <p>Full content of Blog Post 2. Discuss the topic in detail, share insights, and include relevant images.</p>
         </div>
     </div>
 
-    <!-- Overlay -->
-    <div class="overlay" id="popup-overlay" onclick="closeAllPopups()"></div>
-
-    <!-- Script for Pop-ups -->
     <script>
         function openPopup(popupId) {
-            document.getElementById(popupId).classList.add('active');
-            document.getElementById('popup-overlay').classList.add('active');
+            document.getElementById(popupId).style.display = 'block';
         }
 
         function closePopup(popupId) {
-            document.getElementById(popupId).classList.remove('active');
-            document.getElementById('popup-overlay').classList.remove('active');
-        }
-
-        function closeAllPopups() {
-            var popups = document.querySelectorAll('.popup');
-            popups.forEach(function(popup) {
-                popup.classList.remove('active');
-            });
-            document.getElementById('popup-overlay').classList.remove('active');
+            document.getElementById(popupId).style.display = 'none';
         }
     </script>
 </body>
